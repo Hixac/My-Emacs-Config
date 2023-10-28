@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+
+int main() {
+    setlocale(0, "");
+    int numz, numo;
+    printf("Введите загадываемое значение от 1 до 100\t");
+    scanf_s("%d", &numz);
+    if (numz > 100 or numz < 0) {
+        printf("Число вне промежутка\n");
+    }
+    printf("Предположите число которое загадал игрок\t ");
+    scanf_s("%d", &numo);
+    while (numo != numz) {
+        printf("Вы не угадали повторите попытку\n");
+        if (numo > numz) {
+            printf("Меньше\n");
+        }
+        else {
+            printf("Меньше\n");
+        }
+        scanf_s("%d", &numo);
+    }
+
+    printf("Ура победа!!!\n");
+    system("pause");
+    return 0;
+}

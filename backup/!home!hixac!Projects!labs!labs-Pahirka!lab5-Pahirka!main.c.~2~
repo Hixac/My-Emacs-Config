@@ -1,0 +1,56 @@
+/* Упорядочить массив Х(N) по возрастанию модулей элементов, найти сумму и произведение отрицательных элементов массива. */
+
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    const unsigned int size = 10;
+	int sum, mul = 1;
+	
+    int arr[size];
+
+    printf("Создание массива\n");
+
+    srand(time(NULL));
+    for (int i = 0; i < size; i++)
+    {
+        arr[i] = (rand() % 100) * pow(-1, i);
+        printf("%i, ", arr[i]);
+    }
+    
+    int max;
+    for (size_t i = 0; i < size; i++)
+    {
+	    if (arr[i] < 0)
+		{
+		   mul *= arr[i];
+		   sum += arr[i];
+		}
+	  
+        max = i;
+        for (size_t j = i + 1; j < size; j++)
+        {
+           if (abs(arr[max]) <= abs(arr[j]))
+           {
+                max = j;
+           }
+        }
+        
+        int temp = arr[max];
+        arr[max] = arr[i];
+        arr[i] = temp;
+    }
+
+    printf("\nПроверка массива\n");
+    for (size_t i = 0; i < size; i++)
+    {
+        printf("%i, ", arr[i]);
+    }
+
+	printf("\nСумма: %i ; Произведение: %i", sum, mul);
+	
+    return 0;
+}

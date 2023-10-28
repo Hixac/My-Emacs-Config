@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    setlocale(0, "");
+    int numo;
+	srand(time(NULL));
+	int numz = rand() % 100;
+    if (numz > 100 || numz < 0) {
+        printf("Число вне промежутка\n");
+    }
+    printf("Предположите число которое загадал игрок\t ");
+    scanf("%i", &numo);
+    while (numo != numz) {
+        printf("Вы не угадали повторите попытку\n");
+        if (numo > numz) {
+            printf("Меньше\n");
+        }
+        else {
+            printf("Больше\n");
+        }
+        scanf("%i", &numo);
+    }
+    printf("Ура победа!!!\n");
+    return 0;
+}

@@ -1,0 +1,51 @@
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+
+int main(void)
+{
+  char string[255];
+
+  scanf("%252[0-9a-zA-Z ]", &string[0]);
+
+  for (size_t i = 0; i < 255; i++)
+  {
+	if (string[i] == '\0') {
+	  string[i] = ' ';
+	  string[i+1] = '\0';
+	}
+  }
+  
+  size_t index = 0;
+  size_t size = 0;
+  size_t smallest = INT64_MAX;
+  size_t indexSmallest = 0;
+  for (char* i = &string[0]; *i != '\0'; i++)
+  {
+    if (*i == ' ') {
+	  if (smallest > size && size != 0) {
+		smallest = size;
+		indexSmallest = index - size;
+	  }
+	  size = 0;
+	} else {
+	  size++;
+	}
+	
+	index++;
+  }
+
+  char word[smallest];
+  for (size_t i = indexSmallest, j = 0; i < indexSmallest + smallest; i++, j++)
+  {
+	word[j] = string[i];
+    if (i % 2 == 1) {
+	  string[i] = ' ';
+	}
+  }
+
+  printf("%s\n", string);
+  printf("smallest: %zu ; index of the smallest: %zu ;  word \"%s\" \n", smallest, indexSmallest, word);
+  
+  return 0;
+}

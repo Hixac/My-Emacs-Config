@@ -1,0 +1,51 @@
+cars_in = {}
+checklist = ["BMW", "Mercedes", "Kia", "Mazda", "Hyundai", "Lada", "Mitsubishi", "Porsche", "Audi","Subaru"]
+condition = "Тип кузова,Обьем двигателя,Фары    "
+while True:
+  print("Вы хотите заехать/выехать или узнать кол-во свободных мест на парковке\nЕсли хотите узнать места на парковке, введите 'Места на парковке'")
+  comand = input()
+ 
+  if comand == "заехать":
+    helps1 = input("Хотите заехать на парковку? Да/Нет ")
+    if helps1 == "Да" or helps1 == "да":
+      marka = input("Введите марку машины: ")
+      if marka in checklist:
+        number = input("Введите государственный регистрационный номер: ")
+        if len(number) == 6 and number.isalnum():
+          if len(cars_in) < 10:
+            cars_in[number] = marka
+            print("Добро пожаловать на парковку\n")
+          else:
+            print("Извините, парковка полностью заполнена\n")
+      else:
+          print("Неправильный формат государственного регистрационного номера\n")
+    elif helps1 == "Нет" or helps1 == "нет":
+        print("Возврат к выбору операции\n")
+        continue
+    else:
+        print("Такая марка машины не разрешена на парковке\n")
+  elif comand == "выехать":
+    s = input("Введите номер машины: ")
+    if s in cars_in:
+      del cars_in[s]
+      print("Счастливого пути\n")
+    else:
+      print("Такая машина не найдена на парковке\n")
+ 
+  elif comand == "Места на парковке":
+    print("Количество свободных мест на парковке:", 10 - len(cars_in))
+    for number, name in cars_in.items():
+      print(name, number)
+  elif comand == "Сохранить состояние парковки":
+    f = open("mesta.txt","w")
+    f.write(" ".join([' '.join([str(i+1), str(j), str(k)]) for i, (j, k) in enumerate(cars_in.items())]))
+    f.close()
+  elif comand == "Найти машину на парковке":
+    s2 = input("Введите регистрационный номер машины которую ищете")
+    if s2 in cars_in:
+      print(cars_in[s2], s2)
+  elif comand == "Добавить данные о машине":
+    s3 = input("Введите регистрационный номер машины которую ищете:")
+    if s3 in cars_in:
+      print(cars_in[s3], s3)
+      cars_in[s3] += ' ' + input(f"Введите данные через запятую: {condition}")

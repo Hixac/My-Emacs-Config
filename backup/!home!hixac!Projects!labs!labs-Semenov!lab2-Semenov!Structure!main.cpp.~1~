@@ -1,0 +1,90 @@
+#include <iostream>
+#include <string>
+#include <unordered_map>
+
+#define PRINT(x) std::cout << (x) << std::endl
+#define nfPRINT(x) std::cout << x << std::endl
+#define xPRINT(x) std::cout << (x)
+
+using string = std::string;
+
+std::unordered_map<string, string> cars;
+
+int main(void)
+{
+    PRINT("Консоль");
+    string comand;
+    while (comand != "выход")
+    {
+        string args[3];
+
+        xPRINT(">>");
+        getline(std::cin, comand);
+
+        if (comand.find(' ') != string::npos)
+        {
+            args[0] = comand.substr(0, comand.find(' '));
+            comand.erase(0, comand.find(' ') + 1);
+            args[1] = comand.substr(0, comand.find(' '));
+            comand.erase(0, comand.find(' ') + 1);
+            args[2] = comand.substr(0, comand.find(' '));
+        }
+
+        if (comand == "help")
+        {
+            PRINT("ls -- вывести список");
+            PRINT("add [номер] [название] -- добавить машину");
+            PRINT("delete [номер] -- удалить машину по номеру");
+            PRINT("change [номер] [новое название] -- изменить машину название по номеру");
+        }
+
+        if (comand == "ls")
+        {
+            if (cars.empty())
+            {
+                PRINT("Дата база пуста!");
+                continue;
+            }
+            PRINT("Номер: Название:");
+            for (auto i = cars.begin(); i != cars.end(); i++)
+            {
+                nfPRINT(i->first << " " << i->second);
+            }
+        }
+
+        if (args[0] == "add")
+        {
+            if (cars.count(args[1]) == 1)
+            {
+                PRINT("Машина с таким номером существует!");
+                continue;
+            }
+
+            nfPRINT("Добавлена машина с номером \"" << args[1] << "\" и названием \"" << args[2] << "\"");
+            cars[args[1]] = args[2];
+        }
+        
+        if (args[0] == "delete")
+        {
+            if (cars.count(args[1]) == 0)
+            {
+                PRINT("Машины с таким номером не существует!");
+                continue;
+            }
+            
+            string car = cars[args[1]];
+            nfPRINT("Удалена машина \"" << car << "\" с номером \"" << args[1] << "\"");
+            cars.erase(args[1]);
+        }
+
+        if (args[0] == "change")
+        {
+            string car = cars[args[1]];
+            nfPRINT("Изменена машина с номером \"" << args[1] << "\" и старым названием \"" << car << "\"  на название \"" << args[2] << "\"");
+            cars[args[1]] = args[2];
+        }
+        
+    }
+
+    return 0;
+}

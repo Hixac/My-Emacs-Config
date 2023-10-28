@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(void) // ----------------- Laboratory №8
+{
+    float x = 0;
+    do
+    {
+        if (x == 0) {
+            printf("It's illegal to do like that!\nx = %.1f\n", x);
+
+            x+=0.25f;
+            continue;
+        }
+
+        double f = log((double)sin(x)/(x*x));
+
+        printf("argument: %-10sfunction:\n", " ");
+        printf("x = %-15.2f f = %-15lf\n", x, f);
+
+        x+=0.25f;
+    } while (x <= 1.5f);
+}

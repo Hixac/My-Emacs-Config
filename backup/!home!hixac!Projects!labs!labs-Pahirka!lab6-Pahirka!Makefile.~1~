@@ -1,0 +1,8 @@
+all:
+	gcc -o runner main.c -lm
+
+run:
+	./runner
+
+clean:
+	rm runner

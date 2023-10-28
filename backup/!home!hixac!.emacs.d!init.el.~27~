@@ -1,0 +1,70 @@
+(package-initialize)
+(add-to-list 'package-archives
+	     '("melpa" . "https://melpa.org/packages/"))
+
+(ido-mode 1)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes '(gruber-darker))
+ '(custom-safe-themes
+   '("ba4ab079778624e2eadbdc5d9345e6ada531dc3febeb24d257e6d31d5ed02577" default))
+ '(package-selected-packages '(cmake-font-lock company magit gruber-darker-theme smex))
+ '(warning-suppress-log-types '((initialization))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:family "JetBrainsMonoNL Nerd Font" :foundry "JB" :slant normal :weight regular :height 128 :width normal)))))
+
+;; Custom functions        ----------------------------------------------------------------
+
+(defun hixac/backward-kill-word ()
+  "Remove all whitespace if the character behind the cursor is whitespace, otherwise remove a word."
+  (interactive)
+  (if (looking-back "[ {}[]\n]")
+      ;; delete horizontal space before us and then check to see if we
+      ;; are looking at a newline
+      (progn (delete-horizontal-space 't)
+             (while (looking-back "[ \n]")
+               (backward-delete-char 1)))
+    ;; otherwise, just do the normal kill word.
+    (backward-kill-word 1)))
+
+;; End of custom functions! ----------------------------------------------------------------
+
+(setq backup-directory-alist '(("." . "~/.emacs.d/backup"))
+  backup-by-copying t    ; Don't delink hardlinks
+  version-control t      ; Use version numbers on backups
+  delete-old-versions t  ; Automatically delete excess backups
+  kept-new-versions 20   ; how many of the newest versions to keep
+  kept-old-versions 5    ; and how many of the old
+)
+(setq tab-always-indent 'complete)
+(add-to-list 'completion-styles 'initials t)
+
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; This is your old M-x.
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+(global-set-key (kbd "C-<backspace>") 'hixac/backward-kill-word)
+
+(setq inhibit-startup-screen t)
+(setq-default tab-width 4)
+
+(global-display-line-numbers-mode)
+(setq display-line-numbers-type 'relative)
+
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+(defun mode-line-buffer-file-parent-directory ()
+  (when buffer-file-name
+    (concat "[" (directory-file-name (file-name-directory buffer-file-name)) "]")))
+(setq-default mode-line-buffer-identification
+			  (cons (car mode-line-buffer-identification) '((:eval (mode-line-buffer-file-parent-directory)))))
+
+(add-hook 'after-init-hook 'global-company-mode)
