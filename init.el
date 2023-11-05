@@ -11,7 +11,8 @@
  '(custom-enabled-themes '(gruber-darker))
  '(custom-safe-themes
    '("ba4ab079778624e2eadbdc5d9345e6ada531dc3febeb24d257e6d31d5ed02577" default))
- '(package-selected-packages '(cmake-font-lock company magit gruber-darker-theme smex))
+ '(package-selected-packages
+   '(multiple-cursors cmake-font-lock company magit gruber-darker-theme smex))
  '(warning-suppress-log-types '((initialization))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -57,7 +58,6 @@
 (setq-default tab-width 4)
 
 (global-display-line-numbers-mode)
-(setq display-line-numbers-type 'relative)
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
@@ -72,3 +72,9 @@
 (setq c-default-style "linux"
 	  c-basic-offset 4)
 (electric-pair-mode 1)
+
+(require 'multiple-cursors)
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)

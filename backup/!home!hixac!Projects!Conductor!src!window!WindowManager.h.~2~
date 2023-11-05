@@ -1,0 +1,20 @@
+#include <window.h>
+#include <vector>
+
+class WindowManager
+{
+public:
+	WindowManager();
+	~WindowManager();
+
+	void Add(Window& win);
+	void Remove(size_t index);
+	
+    Window Get(size_t index);
+
+	bool StartUpdate();
+    void EndUpdate();
+	
+private:
+	std::vector<Window> m_Windows;
+};

@@ -1,23 +1,23 @@
 
 ;; ----- smex-history -----
 (
+ list-packages
+ kill-rectangle
+ delete-rectangle
+ cmake-help
+ just-one-space
  eglot
- indent-rigidly-left
- eldoc-doc-buffer
- shell
- c-set-style
- compile
  shell-command
 )
 
 ;; ----- smex-data -----
 (
- (list-packages . 10)
+ (list-packages . 11)
  (customize-themes . 1)
  (magit . 2)
  (package-list-packages . 1)
  (ielm . 1)
- (eglot . 27)
+ (eglot . 41)
  (eglot-server-menu . 1)
  (eglot-manual . 2)
  (company-mode . 2)
@@ -25,10 +25,10 @@
  (cmake-mode . 2)
  (man . 1)
  (describe-function . 1)
- (cmake-help . 4)
+ (cmake-help . 5)
  (c++-mode . 2)
  (comment-region . 3)
- (eglot-shutdown . 1)
+ (eglot-shutdown . 3)
  (query-replace . 6)
  (lisp-mode . 1)
  (emacs-lisp-mode . 1)
@@ -37,19 +37,19 @@
  (elint-file . 6)
  (cd . 3)
  (edebug-defun . 7)
- (cmake-command-run . 1)
+ (cmake-command-run . 2)
  (bash-ts-mode . 1)
  (python-mode . 1)
  (c-mode . 1)
  (debug . 2)
- (compile . 21)
+ (compile . 31)
  (dired . 1)
  (dired-do-shell-command . 4)
- (delete-file . 1)
- (shell-command . 11)
+ (delete-file . 3)
+ (shell-command . 46)
  (setenv . 1)
  (c-add-style . 1)
- (eglot-code-action-quickfix . 1)
+ (eglot-code-action-quickfix . 4)
  (shell . 15)
  (gdb . 2)
  (gud-gdb . 1)
@@ -59,5 +59,8 @@
  (eglot-show-workspace-configuration . 1)
  (c-set-style . 3)
  (indent-rigidly-left . 1)
- (eglot-reconnect . 1)
+ (eglot-reconnect . 4)
+ (just-one-space . 1)
+ (delete-rectangle . 1)
+ (kill-rectangle . 4)
 )

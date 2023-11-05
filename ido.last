@@ -2,6 +2,10 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/hixac/Projects/Conductor/ext/imgui/misc/" . "cpp/")
+ ("/home/hixac/Projects/Conductor/ext/imgui/" . "misc/")
+ ("/home/hixac/Projects/Conductor/ext/" . "imgui/")
+ ("/home/hixac/Projects/Conductor/src/" . "window/")
  ("/home/hixac/Projects/labs/exercise/" . "build/")
  ("/home/hixac/Projects/labs/labs-Buryachenko/" . "lab-git/")
  ("/home/hixac/Desktop/" . "Полезная информация для меня/")
@@ -20,9 +24,14 @@
 ;; ----- ido-work-directory-list -----
 (
  "/home/hixac/Projects/Conductor/"
- "/home/hixac/Projects/Conductor/src/window/"
  "/home/hixac/Projects/Conductor/src/"
  "/home/hixac/.emacs.d/"
+ "/home/hixac/Projects/Conductor/ext/imgui/misc/cpp/"
+ "/home/hixac/Downloads/imgui-1.89.9/"
+ "/home/hixac/Downloads/"
+ "/home/hixac/Projects/Fembot/"
+ "/home/hixac/"
+ "/home/hixac/Projects/Conductor/src/window/"
  "/home/hixac/Projects/labs/labs-Pahirka/lab4-Pahirka/"
  "/home/hixac/Projects/labs/labs-Pahirka/lab6-Pahirka/"
  "/home/hixac/Projects/labs/exercise/"
@@ -30,7 +39,6 @@
  "/home/hixac/Desktop/"
  "/home/hixac/Desktop/Полезная информация для меня/"
  "/home/hixac/Projects/labs/labs-Semenov/lab2-Semenov/Structure/"
- "/home/hixac/"
  "/home/hixac/Projects/labs/labs-Buryachenko/lab-git/"
  "/root/"
  "/home/hixac/Desktop/Программные лекции./"
@@ -43,25 +51,49 @@
 
 ;; ----- ido-work-file-list -----
 (
- "window.cpp"
- "window.h"
+ "CMakeLists.txt"
  "main.cpp"
  "init.el"
- "main.c"
- "Makefile"
- "todo.txt"
- "ido.last"
- ".emacs"
- "proskurin-3.txt"
+ "imgui_stdlib.cpp"
+ "imgui_stdlib.h"
+ "imgui_demo.cpp"
+ "document.py"
+ "main.py"
+ ".bash_history"
+ "WindowManager.h"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/hixac/Projects/Conductor/src/" (25915 50800 399188 776000) "main.cpp~" "main.cpp" "../" "./" "window/")
+ ("/home/hixac/.emacs.d/" (25927 32242 257451 825000) "ido.last~" "session.24f944db2-4d0b-419e-ae5c-cfb93837f38b" "init.el~" "init.el" "session.21c7585a8-a6aa-4924-a809-bb53234c49bb" "elpa/" "games/" "smex-items" "transient/" "session.2158534fc-3ba0-4c61-bdef-06c0605143b1" "ido.last" "auto-save-list/" "../" "./" "url/" "backup/" ".git/")
 
- ("/home/hixac/Projects/Conductor/src/window/" (25915 48459 19019 126000) ".#window.cpp" "window.h" "../" "window.cpp" "./")
+ ("/home/hixac/" (25927 31761 570237 777000) ".netbeans/" "Projects/" ".bash_history" ".ICEauthority" "Videos/" ".opam/" ".config/" ".lesshst" ".Xauthority" ".cache/" "snap/" ".dmrc" ".gitconfig" ".xsession-errors" ".bash_profile" ".wine/" ".npm/" ".dotnet/" ".bash_logout" "Desktop/" "Source/" "../" "./" "Pictures/" ".wget-hsts" ".xsession-errors.old" ".node_repl_history" ".thunderbird/" ".vscode-oss/" ".gnupg/" ".local/" ".mozilla/" "Downloads/" ".emacs.d/" ".java/" ".viminfo" ".vim/" ".vscode/" ".vimrc" ".bashrc" ".snap/" ".pki/")
 
- ("/home/hixac/" (25915 47394 194959 278000) ".netbeans/" "Projects/" ".bash_history" ".ICEauthority" "Videos/" ".opam/" ".config/" ".lesshst" ".Xauthority" ".cache/" "snap/" ".dmrc" ".gitconfig" ".xsession-errors" ".bash_profile" ".wine/" ".npm/" ".dotnet/" ".bash_logout" "Desktop/" "Source/" "../" "./" "Pictures/" ".wget-hsts" ".xsession-errors.old" ".node_repl_history" ".thunderbird/" ".vscode-oss/" ".gnupg/" ".local/" ".mozilla/" "Downloads/" ".emacs.d/" ".java/" ".viminfo" ".vim/" ".vscode/" ".vimrc" ".bashrc" ".snap/" ".pki/")
+ ("/home/hixac/Projects/Conductor/" (25927 32254 794045 750000) ".cache/" "ext/" "build/" "src/" "../" "./" "CMakeLists.txt" ".git/" ".vscode/" ".gitignore" "README.md")
+
+ ("/home/hixac/Projects/Conductor/src/" (25927 31134 887146 566000) "main.cpp" "LoggingSystem.h" "../" "./" "Base.h" "window/")
+
+ ("/home/hixac/Projects/" (25926 43657 333325 729000) "Conductor/" "py-gui/" "check.elcheck.el~" "Fembot/" "../" "./" "labs/")
+
+ ("/home/hixac/Projects/Conductor/ext/imgui/misc/cpp/" (25926 43444 690505 24000) "README.txt" "imgui_stdlib.cpp" "../" "./" "imgui_stdlib.h")
+
+ ("/home/hixac/Projects/Conductor/ext/imgui/misc/" (25885 52173 779314 996000) "fonts/" "freetype/" "single_file/" "README.txt" "cpp/" "../" "./" "debuggers/")
+
+ ("/home/hixac/Projects/Conductor/ext/imgui/" (25890 65247 583076 515000) "imgui_demo.cpp" "imgui_impl_glfw.h" "imstb_rectpack.h" "imconfig.h" "imgui_impl_opengl3.h" "imgui_impl_opengl3_loader.h" "imstb_truetype.h" "imgui_tables.cpp" "../" "LICENSE.txt" "./" "imgui.h" "imstb_textedit.h" "misc/" "imgui_impl_glfw.cpp" "imgui_internal.h" "imgui_impl_opengl3.cpp" "imgui_widgets.cpp" "imgui_draw.cpp" "imgui.cpp")
+
+ ("/home/hixac/Projects/Conductor/ext/" (25926 35944 391236 616000) "spdlog/" "imgui/" "../" "./")
+
+ ("/home/hixac/Projects/Conductor/src/window/" (25922 20737 988915 365000) "window.h" "../" "window.cpp" "./")
+
+ ("/home/hixac/Downloads/imgui-1.89.9/" (25845 55495 0 0) ".gitattributes" "imgui_demo.cpp" "backends/" "imstb_rectpack.h" "imconfig.h" ".editorconfig" ".github/" "imstb_truetype.h" "docs/" "examples/" "imgui_tables.cpp" "../" "LICENSE.txt" "./" "imgui.h" "imstb_textedit.h" "misc/" "imgui_internal.h" "imgui_widgets.cpp" "imgui_draw.cpp" "imgui.cpp" ".gitignore")
+
+ ("/home/hixac/Downloads/imgui-1.89.9/examples/" (25845 55495 0 0) "libs/" "example_sdl2_directx11/" "example_glfw_metal/" "example_win32_directx12/" "example_win32_opengl3/" "imgui_examples.sln" "example_allegro5/" "example_sdl2_opengl2/" "example_sdl2_opengl3/" "README.txt" "example_glfw_vulkan/" "example_sdl3_opengl3/" "example_null/" "example_sdl2_sdlrenderer2/" "../" "./" "example_glfw_opengl3/" "example_sdl2_metal/" "example_win32_directx11/" "example_apple_metal/" "example_win32_directx9/" "example_glfw_opengl2/" "example_sdl3_sdlrenderer3/" "example_win32_directx10/" "example_apple_opengl2/" "example_android_opengl3/" "example_glut_opengl2/" "example_sdl2_vulkan/" "example_emscripten_wgpu/")
+
+ ("/home/hixac/Downloads/imgui-1.89.9/examples/example_glfw_opengl3/" (25914 18990 311012 443000) "Makefile" "#main.cpp#" "imgui_tables.o" "main.cpp" "example_glfw_opengl3.vcxproj" "imgui_impl_opengl3.o" "example_glfw_opengl3.vcxproj.filters" "imgui_draw.o" "imgui.ini" "imgui_log.txt" "Makefile.emscripten" "../" "./" "imgui_widgets.o" "imgui.o" "example_glfw_opengl3" "imgui_impl_glfw.o" "main.o" "imgui_demo.o" "build_win32.bat")
+
+ ("/home/hixac/Downloads/" (25922 10273 960922 788000) "Telegram Desktop/" "main (2).py~" "../" "./" "pobeda.py" "imgui-1.89.9/" "document.py")
+
+ ("/home/hixac/Projects/Fembot/" (25921 11739 891758 266000) "venv/" "../" "./" "main.py")
 
  ("/home/hixac/Desktop/Полезная информация для меня/" (25911 57895 850746 983000) "Screenshot_2023-10-08_17-43-16.png" "todo.txt" "../" "./")
 
@@ -71,11 +103,7 @@
 
  ("/home/hixac/Projects/labs/labs-Pahirka/lab4-Pahirka/" (25912 51866 629481 237000) "Makefile" "main.c" "runner" "../" "./" ".vscode/")
 
- ("/home/hixac/.emacs.d/" (25914 30766 86110 315000) "ido.last~" "session.24f944db2-4d0b-419e-ae5c-cfb93837f38b" "init.el~" "init.el" "session.21c7585a8-a6aa-4924-a809-bb53234c49bb" "elpa/" "games/" "smex-items" "transient/" "session.2158534fc-3ba0-4c61-bdef-06c0605143b1" "ido.last" "auto-save-list/" "../" "./" "url/" "backup/" ".git/")
-
  ("/home/hixac/Projects/Conductor/build/" (25915 46903 941838 359000) "Conductor" "CMakeFiles/" "Makefile" "imgui.ini" "CMakeCache.txt" ".cmake/" "../" "./" "compile_commands.json" "cmake_install.cmake")
-
- ("/home/hixac/Projects/" (25914 21973 800286 470000) "Conductor/" "py-gui/" "check.elcheck.el~" "../" "./" "labs/" "ded/")
 
  ("/home/hixac/Projects/labs/labs-Pahirka/lab5-Pahirka/" (25912 47332 996330 523000) "Makefile" "main.c" "runner" "main.c~" "../" "./" ".vscode/")
 
@@ -108,8 +136,6 @@
  ("/etc/" (25905 36010 826601 255000) "rc_maps.cfg" "tmpfiles.d/" "subuid" "shadow-" "fonts/" "login.defs" "usb_modeswitch.conf" "wgetrc" "ca-certificates/" "lvm/" "skel/" "audit/" "modprobe.d/" "request-key.d/" "pam.d/" "mkinitcpio.conf" "udev/" "localtime" "httpd/" "sudo.conf" "mkinitcpio.d/" "udisks2/" "xdg/" "java-openjdk/" "sysctl.d/" "locale.conf" "default/" "hosts" "modules-load.d/" "bash.bash_logout" "ld.so.conf.d/" "gtk-3.0/" "subgid" "sudoers" "mdadm.conf" "usb_modeswitch.d/" "shadow" "NetworkManager/" "modulefiles/" "makepkg.conf" "dconf/" "pkcs11/" "pipewire/" "bash.bashrc" "alsa/" "securetty" "group-" "sensors.d/" "gdb/" "systemd/" "pulse/" "credstore.encrypted/" "passwd" "netconfig" "mke2fs.conf" "trusted-key.key" "shells.pacnew" "libblockdev/" ".pwd.lock" "xtables.conf" "inputrc" "environment" "mailcap" "fstab" "gshadow-" "apparmor.d/" "tpm2-tss/" "dbus-1/" "e2scrub.conf" "security/" "depmod.d/" "openldap/" "vpl/" "mkinitcpio.conf.d/" "libinput/" "logrotate.d/" "profile.d/" "grub.d/" "fuse.conf" "initcpio/" "group" "php/" "gimp/" "vconsole.conf" "os-release" "libreoffice/" "krb5.conf" "pacman.conf" "healthd.conf" "polkit-1/" "../" "X11/" "subgid-" "./" "ssl/" "machine-id" "bindresvport.blacklist" "ethertypes" "man_db.conf" "apparmor/" "sensors3.conf" "libva.conf" "issue" "host.conf" "rhashrc" "passwd-" "crypttab" "nsswitch.conf" "credstore/" "gtk-2.0/" "kernel/" "slsh.rc" "libnl/" "rpc" "openpmix/" "ld.so.conf" "gprofng.rc" "rc_keymaps/" "libaudit.conf" "locale.gen" "vimrc" "sudoers.d/" "iptables/" "conf.d/" "gai.conf" "nginx/" "ld.so.cache" "protocols" "pacman.d/" "lightdm/" "wpa_supplicant/" "ts.conf" "sudo_logsrvd.conf" "usb_modeswitch.setup" "debuginfod/" "ssh/" "shells" "mtab" "mime.types" "binfmt.d/" "resolv.conf" "avahi/" "keyutils/" "adjtime" "gshadow" "services" "subuid-" "profile" "mono/" "request-key.conf" "arch-release" "UPower/" "xattr.conf" "vdpau_wrapper.cfg" ".updated" "openmpi/" "gnutls/" "jack/" "pinentry/")
 
  ("/home/hixac/Projects/labs/labs-Pahirka/lab1-Pahirka/" (25900 48344 606721 38000) "main.c" "main.c~" "build/" "../" "./" "CMakeLists.txt")
-
- ("/home/hixac/Projects/Conductor/" (25905 33785 133327 770000) ".cache/" "ext/" "build/" "src/" "../" "./" "CMakeLists.txt~" "CMakeLists.txt" ".vscode/")
 
  ("/home/hixac/Pictures/" (25905 13168 90489 353000) "52140 - SoyBooru.png" "VFc6UmHPy20.jpg" "bdueb0RFJwk.jpg" "1695909977989573.gif" "Screenshot_2023-10-08_21-59-46.png" "../" "1695830885856400.gif" "./" "ef1ad8cc02d5f229ad2881db6d0a4c03.jpeg" "1697300013772179.gif")
 

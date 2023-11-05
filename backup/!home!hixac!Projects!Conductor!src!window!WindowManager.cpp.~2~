@@ -1,0 +1,46 @@
+#include <WindowManager.h>
+
+WindowManager::WindowManager()
+{
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
+    glfwInit();
+}
+
+WindowManager::~WindowManager()
+{
+	glfwTerminate();
+}
+
+void WindowManager::Add(Window& win)
+{
+	m_Windows.push_back(win);
+}
+
+void WindowManager::Remove(size_t index)
+{
+	m_Windows.erase(m_Windows.begin() + index);
+}
+
+Window WindowManager::Get(size_t index)
+{
+	return m_Windows[index];
+}
+
+bool WindowManager::StartUpdate()
+{
+    for (auto win : m_Windows)
+	{
+		if (win.StartUpdate())
+			return false;
+	}
+	return true;
+}
+
+void WindowManager::EndUpdate()
+{
+    for (auto win : m_Windows)
+	{
+	    win.EndUpdate();
+	}
+}
