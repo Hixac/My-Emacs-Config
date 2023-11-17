@@ -1,0 +1,15 @@
+#include <raylib.h>
+#include <raygui.h>
+
+int main(void)
+{
+	InitWindow(900, 600, "Parks");
+
+	while (!WindowShouldClose())
+	{
+		
+	}
+
+	CloseWindow();
+	return 0;
+}

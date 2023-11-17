@@ -1,0 +1,8 @@
+[Mercedes N88292]
+Engine = StrongOneCompany
+Tires = StrongOneCompany
+SteeringWheel = PohuyKoroche
+[Audi N28922]
+...					|| MEANS SKIP INFO.
+					|| Also "||" stands for commentary
+[END]

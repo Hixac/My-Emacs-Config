@@ -1,0 +1,18 @@
+#pragma once
+
+#include <string>
+
+namespace Database {
+
+    struct Dataunit
+	{
+		std::string name;
+		std::string value;
+	};
+
+	class Intersort
+	{
+	public:
+	};
+	
+}

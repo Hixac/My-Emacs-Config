@@ -1,0 +1,17 @@
+#include <fstream>
+#include <string>
+
+namespace File {
+
+	class Parser
+	{
+	public:
+		Parser(const std::string& filepath);
+
+	private:
+		std::string ReadLine();
+		
+		std::fstream m_File;
+	};
+	
+}

@@ -1,23 +1,23 @@
 
 ;; ----- smex-history -----
 (
- list-packages
- kill-rectangle
- delete-rectangle
- cmake-help
- just-one-space
  eglot
+ cmake-command-run
  shell-command
+ mkdir
+ scroll-bar-mode
+ compile
+ shell
 )
 
 ;; ----- smex-data -----
 (
- (list-packages . 11)
+ (list-packages . 12)
  (customize-themes . 1)
  (magit . 2)
  (package-list-packages . 1)
  (ielm . 1)
- (eglot . 41)
+ (eglot . 89)
  (eglot-server-menu . 1)
  (eglot-manual . 2)
  (company-mode . 2)
@@ -25,7 +25,7 @@
  (cmake-mode . 2)
  (man . 1)
  (describe-function . 1)
- (cmake-help . 5)
+ (cmake-help . 7)
  (c++-mode . 2)
  (comment-region . 3)
  (eglot-shutdown . 3)
@@ -37,25 +37,25 @@
  (elint-file . 6)
  (cd . 3)
  (edebug-defun . 7)
- (cmake-command-run . 2)
+ (cmake-command-run . 4)
  (bash-ts-mode . 1)
- (python-mode . 1)
+ (python-mode . 2)
  (c-mode . 1)
  (debug . 2)
- (compile . 31)
+ (compile . 33)
  (dired . 1)
  (dired-do-shell-command . 4)
- (delete-file . 3)
- (shell-command . 46)
+ (delete-file . 4)
+ (shell-command . 79)
  (setenv . 1)
  (c-add-style . 1)
- (eglot-code-action-quickfix . 4)
- (shell . 15)
+ (eglot-code-action-quickfix . 7)
+ (shell . 16)
  (gdb . 2)
  (gud-gdb . 1)
  (uncomment-region . 1)
  (eglot-code-actions . 1)
- (eldoc-doc-buffer . 3)
+ (eldoc-doc-buffer . 5)
  (eglot-show-workspace-configuration . 1)
  (c-set-style . 3)
  (indent-rigidly-left . 1)
@@ -63,4 +63,15 @@
  (just-one-space . 1)
  (delete-rectangle . 1)
  (kill-rectangle . 4)
+ (dired-sort-toggle-or-edit . 7)
+ (recover-this-file . 1)
+ (count-words . 1)
+ (rust-ts-mode . 2)
+ (rust-run . 3)
+ (rust-check . 3)
+ (treesit-install-language-grammar . 9)
+ (tool-bar-mode . 1)
+ (scroll-bar-mode . 1)
+ (mkdir . 1)
+ (eglot-rename . 4)
 )

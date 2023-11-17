@@ -1,0 +1,35 @@
+#pragma once
+
+namespace File {
+
+	enum class Tokenizer
+	{
+		None, Undefined, Space,
+		StartObject, EndObject
+	};
+	
+	class Lexer
+	{
+	public:
+		static Tokenizer SymbolResolver(const char symbol)
+		{
+			switch (symbol)
+			{
+			case '[':
+				return Tokenizer::StartObject;
+			case ']':
+				return Tokenizer::EndObject;
+			case ' ':
+				return Tokenizer::Space;
+			default:
+				return Tokenizer::Undefined;
+			}
+		}
+
+		inline static Tokenizer LastToken = Tokenizer::None;
+	private:
+		Lexer() = default;
+	    ~Lexer() = default;
+	};
+	
+}

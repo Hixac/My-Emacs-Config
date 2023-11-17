@@ -1,0 +1,66 @@
+#include <extracter.h>
+#include <lexer.h>
+
+#include <memory>
+#include <parser.h>
+
+namespace File {
+
+	Parser::Parser(Extracter& file)
+	{
+		m_File = std::unique_ptr<Extracter>(&file);
+	}
+
+	Database::Intersort Parser::Process()
+	{
+		Database::Intersort data;
+		
+		std::string tempName = "";
+		Database::Dataunit unit;
+		std::vector<Database::Dataunit> units;
+		bool startObjectFlag = false;
+		bool startSaving = false;
+		
+		auto lines = m_File->GetLines();
+		for (auto& item : lines)
+		{
+			item += '\n';
+			for (size_t i = 0; i < item.length(); i++)
+			{
+				switch(Lexer::SymbolResolver(item[i]))
+				{
+				case Tokenizer::StartObject:
+				    startObjectFlag = true;
+					data.Add(tempName, units);
+					units.clear();
+					tempName = "";
+					break;
+				case Tokenizer::EndObject:
+					startObjectFlag = false;
+					break;
+				case Tokenizer::Undefined:
+					if (startObjectFlag)   tempName += item[i];
+					else if (!startSaving) unit.name += item[i];
+				    else if (startSaving)  unit.value += item[i];
+					break;
+				case Tokenizer::Saving:
+					startSaving = true;
+					break;
+				case Tokenizer::Commiting:
+					startSaving = false;
+					units.push_back(unit);
+					unit.name = ""; unit.value = "";
+					break;
+				case Tokenizer::Commentary:
+					goto EXIT_LOOP;
+				case Tokenizer::Space:
+					break;
+				case Tokenizer::None:
+					break;
+				}
+			}
+		EXIT_LOOP:;
+		}
+		return data;
+	}
+}

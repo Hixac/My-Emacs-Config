@@ -1,0 +1,25 @@
+#include <imgui.h>
+#include <window.h>
+#include <spdlog/spdlog.h>
+#define DEBUG
+#include <Base.h>
+
+int main(void)
+{
+	INIT_LOG();
+	
+  	Window win(1280, 720, "Парковка");
+    while (win.StartUpdate())
+    {
+		ImGui::Begin("Parking", nullptr, ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize);
+		
+		
+		ImGui::End();
+		
+        win.EndUpdate();
+    }
+
+	Window::StopIMGUI();
+
+    return 0;
+}

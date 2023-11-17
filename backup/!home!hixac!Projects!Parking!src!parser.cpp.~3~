@@ -1,0 +1,56 @@
+#include <parser.h>
+#include <string>
+#define DEBUG
+#include <Base.h>
+
+namespace File {
+
+	Parser::Parser(const std::string& filepath)
+	{
+		m_File.open(filepath);
+		if (m_File)
+		{
+			m_File.open(filepath, std::fstream::in | std::fstream::out | std::fstream::trunc);
+		}
+		
+		ReadLines();
+	}
+
+	Parser::~Parser()
+	{
+		m_File.close();
+	}
+	
+	void Parser::ReadLines()
+	{
+		if (m_File.is_open())
+		{
+			std::string line;
+			while (std::getline(m_File, line))
+				m_Lines.push_back(line);
+		}
+		else { LOG_ERROR("File not open!"); }
+	}
+
+	std::string Parser::ReadLine(size_t line)
+	{
+		GotoLine(line, STATE::Input);
+		std::string strLine;
+		std::getline(m_File, strLine);
+
+		return strLine;
+	}
+	
+	void Parser::GotoLine(unsigned int num, STATE state)
+	{
+		switch (state)
+		{
+		case STATE::Input:
+			m_File.seekg(num, std::ios::beg);
+			break;
+		case STATE::Output:
+			m_File.seekp(num, std::ios::beg);
+			break;
+		}
+	}
+}

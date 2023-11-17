@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <errno.h>
+#include <string.h>
+
+
+int main()
+{
+	int el;
+	char a[10], b[10], c[10];
+	FILE* A;
+	FILE* B;
+	FILE* C;
+	FILE* D;
+	errno_t err;
+	printf("Enter the number of elements\n");
+	scanf_s("%d", &el);
+	if ((err = (fopen(&A, "a.txt", "w+")) == 0))
+	{
+		char buf[100];
+		strerror(buf, sizeof buf, err);
+		printf("Error opening file: %s\n", buf);
+		return 0;
+	}

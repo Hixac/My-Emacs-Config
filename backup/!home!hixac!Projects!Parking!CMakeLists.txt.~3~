@@ -1,0 +1,40 @@
+cmake_minimum_required(VERSION 3.27)
+
+project(
+  Parking
+  DESCRIPTION "Do you need parking lot?"
+  LANGUAGES C
+)
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+set(SRC src/main.c)
+set(SRC_RAYLIB
+  /ext/raylib/src/external
+  /ext/raylib/src/utils.h
+  /ext/raylib/src/utils.c
+  /ext/raylib/src/rtextures.c
+  /ext/raylib/src/rtext.c
+  /ext/raylib/src/rshapes.c
+  /ext/raylib/src/rmodels.c
+  /ext/raylib/src/rlgl.h
+  /ext/raylib/src/rglfw.c
+  /ext/raylib/src/rgestures.h
+  /ext/raylib/src/rcore.c
+  /ext/raylib/src/rcamera.h
+  /ext/raylib/src/raymath.h
+  /ext/raylib/src/raylib.h
+  /ext/raylib/src/raudio.c
+  /ext/raylib/src/config.h
+)
+set(SRC_RAYGUI
+  /ext/raylib/raygui/raygui.h
+)
+
+set(RAYLIB_PATH /ext/raylib/src/)
+set(RAYGUI_PATH /ext/raylib/raygui/)
+
+add_executable(${PROJECT_NAME} ${SRC} ${SRC_RAYLIB} ${SRC_RAYGUI})
+
+target_include_directories(${PROJECT_NAME} PRIVATE ${RAYLIB_PATH})
+target_include_directories(${PROJECT_NAME} PRIVATE ${RAYGUI_PATH})

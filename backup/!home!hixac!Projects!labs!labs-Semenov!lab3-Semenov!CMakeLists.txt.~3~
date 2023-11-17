@@ -1,0 +1,35 @@
+cmake_minimum_required(VERSION 3.25)
+
+project(car-parking
+  VERSION 0.0.1
+  DESCRIPTION "Bullshit shit for a damn school work at least I learn some C if I comprehend it..."
+  HOMEPAGE_URL "Future github"
+  LANGUAGES C)
+
+set(SRC src/main.c)
+set(SRC_RAYLIB
+  ${PROJECT_SOURCE_DIR}/ext/raylib/src/external
+  ${PROJECT_SOURCE_DIR}/ext/raylib/src/utils.h
+  ${PROJECT_SOURCE_DIR}/ext/raylib/src/utils.c
+  ${PROJECT_SOURCE_DIR}/ext/raylib/src/rtextures.c
+  ${PROJECT_SOURCE_DIR}/ext/raylib/src/rtext.c
+  ${PROJECT_SOURCE_DIR}/ext/raylib/src/rshapes.c
+  ${PROJECT_SOURCE_DIR}/ext/raylib/src/rmodels.c
+  ${PROJECT_SOURCE_DIR}/ext/raylib/src/rlgl.h
+  ${PROJECT_SOURCE_DIR}/ext/raylib/src/rglfw.c
+  ${PROJECT_SOURCE_DIR}/ext/raylib/src/rgestures.h
+  ${PROJECT_SOURCE_DIR}/ext/raylib/src/rcore.c
+  ${PROJECT_SOURCE_DIR}/ext/raylib/src/rcamera.h
+  ${PROJECT_SOURCE_DIR}/ext/raylib/src/raymath.h
+  ${PROJECT_SOURCE_DIR}/ext/raylib/src/raylib.rc
+  ${PROJECT_SOURCE_DIR}/ext/raylib/src/raylib.h
+  ${PROJECT_SOURCE_DIR}/ext/raylib/src/raudio.c
+  ${PROJECT_SOURCE_DIR}/ext/raylib/src/config.h)
+
+set(SRC_DIR src/)
+set(RAYLIB_DIR ext/raylib/src)
+
+add_executable(${PROJECT_NAME} ${SRC} ${SRC_RAYLIB})
+
+target_include_directories(${PROJECT_NAME} PRIVATE ${SRC_DIR})
+target_include_directories(${PROJECT_NAME} PRIVATE ${RAYLIB_DIR})

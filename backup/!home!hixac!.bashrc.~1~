@@ -1,0 +1,17 @@
+
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias 7z='/home/hixac/Source/7z/7zz'
+alias editbash='gvim /home/hixac/.bashrc'
+alias tg='./home/hixac/Source/Telegram/Telegram'
+PS1='[\u@\h \W]\$ '
+
+source ~/Source/gitstatus/gitstatus.prompt.sh
+source ~/.config/autorun.sh
+. "$HOME/.cargo/env"

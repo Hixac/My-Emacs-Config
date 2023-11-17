@@ -1,0 +1,10 @@
+#include <dataunit.h>
+
+namespace Database {
+
+	Intersort::Add(std::string code, std::vector<Dataunit>)
+	{
+		
+	}
+	
+}

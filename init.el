@@ -2,25 +2,6 @@
 (add-to-list 'package-archives
 	     '("melpa" . "https://melpa.org/packages/"))
 
-(ido-mode 1)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(gruber-darker))
- '(custom-safe-themes
-   '("ba4ab079778624e2eadbdc5d9345e6ada531dc3febeb24d257e6d31d5ed02577" default))
- '(package-selected-packages
-   '(multiple-cursors cmake-font-lock company magit gruber-darker-theme smex))
- '(warning-suppress-log-types '((initialization))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:family "JetBrainsMonoNL Nerd Font" :foundry "JB" :slant normal :weight regular :height 128 :width normal)))))
-
 ;; Custom functions        ----------------------------------------------------------------
 
 (defun hixac/backward-kill-word ()
@@ -36,6 +17,28 @@
     (backward-kill-word 1)))
 
 ;; End of custom functions! ----------------------------------------------------------------
+
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(setq create-lockfiles nil)
+(ido-mode 1)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes '(gruber-darker))
+ '(custom-safe-themes
+   '("ba4ab079778624e2eadbdc5d9345e6ada531dc3febeb24d257e6d31d5ed02577" default))
+ '(package-selected-packages
+   '(rust-mode multiple-cursors cmake-font-lock company magit gruber-darker-theme smex))
+ '(warning-suppress-log-types '((initialization))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:family "JetBrainsMonoNL Nerd Font" :foundry "JB" :slant normal :weight regular :height 128 :width normal)))))
 
 (setq backup-directory-alist '(("." . "~/.emacs.d/backup"))
   backup-by-copying t    ; Don't delink hardlinks
@@ -59,6 +62,8 @@
 
 (global-display-line-numbers-mode)
 
+(setq dired-listing-switches "-vaBhl  --group-directories-first")
+
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (defun mode-line-buffer-file-parent-directory ()
@@ -78,3 +83,9 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+(add-hook 'rust-mode-hook
+		  (lambda () (setq indent-tabs-mode nil))
+		  (lambda () (prettify-symbols-mode)))
+
+(add-hook 'rust-mode-hook 'eglot-ensure)

@@ -2,6 +2,10 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/hixac/Projects/RustRust/" . "src/")
+ ("/home/hixac/Projects/Parking/ext/" . "raylib/")
+ ("/home/hixac/Projects/Parking/" . "src/")
+ ("/home/hixac/Projects/labs/labs-Semenov/lab3-Semenov/" . "src/")
  ("/home/hixac/Projects/Conductor/ext/imgui/misc/" . "cpp/")
  ("/home/hixac/Projects/Conductor/ext/imgui/" . "misc/")
  ("/home/hixac/Projects/Conductor/ext/" . "imgui/")
@@ -10,27 +14,38 @@
  ("/home/hixac/Projects/labs/labs-Buryachenko/" . "lab-git/")
  ("/home/hixac/Desktop/" . "Полезная информация для меня/")
  ("/home/hixac/Projects/labs/labs-Semenov/lab2-Semenov/" . "Structure/")
- ("/home/hixac/Projects/labs/labs-Semenov/" . "lab2-Semenov/")
+ ("/home/hixac/Projects/labs/labs-Semenov/" . "lab3-Semenov/")
  ("/etc/" . "systemd/")
  ("/" . "root/")
  ("/home/" . "hixac/")
- ("/home/hixac/Projects/labs/" . "labs-Pahirka/")
+ ("/home/hixac/Projects/labs/" . "labs-Semenov/")
  ("/home/hixac/Projects/Conductor/" . "src/")
- ("/home/hixac/Projects/" . "Conductor/")
- ("/home/hixac/" . ".emacs.d/")
+ ("/home/hixac/Projects/" . "Parking/")
+ ("/home/hixac/" . "Projects/")
  ("/home/hixac/Projects/labs/labs-Pahirka/" . "lab4-Pahirka/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/hixac/Projects/Parking/src/"
+ "/home/hixac/Projects/Parking/"
+ "/home/hixac/Projects/guessing_game/"
+ "/home/hixac/Projects/"
+ "/home/hixac/"
  "/home/hixac/.emacs.d/"
+ "/home/hixac/Projects/RustRust/"
+ "/home/hixac/Projects/RustRust/src/"
+ "/home/hixac/Temp/"
  "/home/hixac/Projects/Conductor/"
  "/home/hixac/Projects/Conductor/src/"
+ "/home/hixac/Projects/Parking/ext/raylib/"
+ "/home/hixac/Projects/some/"
+ "/home/hixac/Projects/labs/labs-Semenov/lab3-Semenov/"
+ "/home/hixac/Projects/labs/labs-Semenov/lab3-Semenov/src/"
  "/home/hixac/Projects/Conductor/ext/imgui/misc/cpp/"
  "/home/hixac/Downloads/imgui-1.89.9/"
  "/home/hixac/Downloads/"
  "/home/hixac/Projects/Fembot/"
- "/home/hixac/"
  "/home/hixac/Projects/Conductor/src/window/"
  "/home/hixac/Projects/labs/labs-Pahirka/lab4-Pahirka/"
  "/home/hixac/Projects/labs/labs-Pahirka/lab6-Pahirka/"
@@ -45,35 +60,66 @@
  "/home/hixac/Projects/labs/labs-Semenov/lab2-Semenov/OOP/"
  "/home/hixac/Projects/labs/labs-Semenov/lab2-Semenov/Functional/"
  "/etc/systemd/"
- "/home/hixac/Projects/"
  "/home/hixac/Projects/labs/labs-Pahirka/lab1-Pahirka/"
 )
 
 ;; ----- ido-work-file-list -----
 (
- "init.el"
- "CMakeLists.txt"
  "main.cpp"
- "imgui_stdlib.cpp"
- "imgui_stdlib.h"
- "imgui_demo.cpp"
- "document.py"
- "main.py"
- ".bash_history"
- "WindowManager.h"
+ "parser.cpp"
+ "CMakeLists.txt"
+ "dataunit.cpp"
+ "dataunit.h"
+ "lexer.h"
+ "parser.h"
+ "syntaxanalyzer.h"
+ "Cargo.toml"
+ "init.el"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/hixac/.emacs.d/" (25927 32242 257451 825000) "ido.last~" "session.24f944db2-4d0b-419e-ae5c-cfb93837f38b" "init.el~" "init.el" "session.21c7585a8-a6aa-4924-a809-bb53234c49bb" "elpa/" "games/" "smex-items" "transient/" "session.2158534fc-3ba0-4c61-bdef-06c0605143b1" "ido.last" "auto-save-list/" "../" "./" "url/" "backup/" ".git/")
+ ("/home/hixac/Projects/Parking/src/" (25942 32304 800546 885000) "parser.cpp" "main.cpp" "lexer.h" "LoggingSystem.h" "parser.h" "extracter.h" "../" "./" "extracter.cpp" "Base.h" "window/" "dataunit.cpp" "dataunit.h")
 
- ("/home/hixac/" (25927 31761 570237 777000) ".netbeans/" "Projects/" ".bash_history" ".ICEauthority" "Videos/" ".opam/" ".config/" ".lesshst" ".Xauthority" ".cache/" "snap/" ".dmrc" ".gitconfig" ".xsession-errors" ".bash_profile" ".wine/" ".npm/" ".dotnet/" ".bash_logout" "Desktop/" "Source/" "../" "./" "Pictures/" ".wget-hsts" ".xsession-errors.old" ".node_repl_history" ".thunderbird/" ".vscode-oss/" ".gnupg/" ".local/" ".mozilla/" "Downloads/" ".emacs.d/" ".java/" ".viminfo" ".vim/" ".vscode/" ".vimrc" ".bashrc" ".snap/" ".pki/")
+ ("/home/hixac/Projects/Parking/" (25942 32415 460065 572000) ".cache/" "ext/" "build/" "src/" "../" "./" "CMakeLists.txt")
 
- ("/home/hixac/Projects/Conductor/" (25927 32254 794045 750000) ".cache/" "ext/" "build/" "src/" "../" "./" "CMakeLists.txt" ".git/" ".vscode/" ".gitignore" "README.md")
+ ("/home/hixac/Projects/" (25942 25869 251247 635000) "Conductor/" "guessing_game/" "py-gui/" "Parking/" "Fembot/" "../" "./" "labs/")
 
- ("/home/hixac/Projects/Conductor/src/" (25927 31134 887146 566000) "main.cpp" "LoggingSystem.h" "../" "./" "Base.h" "window/")
+ ("/home/hixac/" (25943 14376 227106 283000) ".netbeans/" "Projects/" ".bash_history" ".ICEauthority" "Videos/" ".opam/" ".config/" ".lesshst" ".Xauthority" ".cache/" "snap/" ".dmrc" ".gitconfig" ".xsession-errors" ".bash_profile" ".wine/" ".npm/" ".dotnet/" ".bash_logout" ".profile" ".rustup/" "Desktop/" "Source/" "../" "./" "Pictures/" ".cargo/" ".wget-hsts" ".xsession-errors.old" ".node_repl_history" ".thunderbird/" ".vscode-oss/" ".gnupg/" ".local/" ".mozilla/" "Downloads/" ".emacs.d/" ".java/" ".viminfo" ".vim/" ".vscode/" ".vimrc" ".bashrc" ".snap/" "Temp/" ".pki/")
 
- ("/home/hixac/Projects/" (25926 43657 333325 729000) "Conductor/" "py-gui/" "check.elcheck.el~" "Fembot/" "../" "./" "labs/")
+ ("/home/hixac/Downloads/" (25939 14775 472722 279000) "Telegram Desktop/" "SolidWorks 2022 SP5.0 Full Premium Multilanguage x64 [2022, Multi + RUS] [rutracker-6277877].torrent" "main (2).py~" "../" "./" "SolidWorks 2023 SP5.0 Full Premium Multilanguage x64 [2023, Multi + RUS] [rutracker-6432128].torrent")
+
+ ("/home/hixac/Projects/guessing_game/" (25941 6999 709583 886000) "Cargo.lock" "Cargo.toml" "target/" "src/" "../" "./" ".git/" ".gitignore")
+
+ ("/home/hixac/Projects/guessing_game/src/" (25941 6982 785796 898000) "main.rs" "../" "./")
+
+ ("/home/hixac/Projects/RustRust/src/" (25941 3566 534208 851000) "main.rs" "../" "./")
+
+ ("/home/hixac/.emacs.d/" (25941 3415 130161 339000) "ido.last~" "session.24f944db2-4d0b-419e-ae5c-cfb93837f38b" "init.el~" "init.el" "session.21c7585a8-a6aa-4924-a809-bb53234c49bb" "session.2d415b0bc-ba69-491d-b67c-4c42df0eac98" "elpa/" "games/" "tree-sitter/" "smex-items" "transient/" "session.2158534fc-3ba0-4c61-bdef-06c0605143b1" "ido.last" "auto-save-list/" "../" "./" "url/" "backup/" ".git/")
+
+ ("/home/hixac/Projects/RustRust/" (25941 1580 364259 619000) "Cargo.lock" "Cargo.toml" "target/" "src/" "../" "./" ".git/" ".gitignore")
+
+ ("/home/hixac/Projects/Parking/ext/" (25935 54756 911748 417000) "spdlog/" "imgui/" "../" "./")
+
+ ("/home/hixac/Desktop/" (25934 63906 873777 491000) "Полезная информация для меня/" "Программные лекции./" "../" "./")
+
+ ("/home/hixac/Projects/Conductor/src/" (25936 56454 579295 824000) "main.cpp" "LoggingSystem.h" "../" "./" "Base.h" "window/")
+
+ ("/home/hixac/Temp/" (25937 9187 567884 551000) "Plan.txt" "Example.py" "../" "./" "#Example.py#")
+
+ ("/home/hixac/Projects/Parking/ext/raylib/" (25621 59568 0 0) "build.zig" "ROADMAP.md" "parser/" "cmake/" "logo/" ".github/" "LICENSE" "HISTORY.md" "projects/" "CHANGELOG" "src/" "examples/" "../" "./" "raylib.pc.in" "BINDINGS.md" "CMakeOptions.txt" "CMakeLists.txt" "FAQ.md" "CONVENTIONS.md" "CONTRIBUTING.md" ".gitignore" "README.md")
+
+ ("/home/hixac/Projects/some/" (25934 11552 57352 409000) "../" "./")
+
+ ("/home/hixac/Projects/labs/labs-Semenov/lab3-Semenov/" (25931 54440 327858 830000) "main.c" ".cache/" "ext/" "build/" "src/" "../" "./" "CMakeLists.txt")
+
+ ("/home/hixac/Projects/labs/labs-Semenov/" (25931 29654 45939 191000) "lab2-Semenov/" "../" "./" "lab1-Semenov (ocaml)/" "lab3-Semenov/" "lab1-Semenov/")
+
+ ("/home/hixac/Projects/labs/labs-Semenov/lab3-Semenov/src/" (25931 51320 935016 678000) "main.c" "../" "./")
+
+ ("/home/hixac/Desktop/Программные лекции./" (25931 26069 732196 871000) "pahirka-arrays.txt" "proskurin-3.txt" "#Лаба №2.txt#" "../" "./" "Лаба №2.txt" "semenov-2.txt" "#proskurin-3.txt#")
+
+ ("/home/hixac/Projects/Conductor/" (25927 32505 232592 36000) ".cache/" "ext/" "build/" "src/" "../" "./" "CMakeLists.txt" ".git/" ".vscode/" ".gitignore" "README.md")
 
  ("/home/hixac/Projects/Conductor/ext/imgui/misc/cpp/" (25926 43444 690505 24000) "README.txt" "imgui_stdlib.cpp" "../" "./" "imgui_stdlib.h")
 
@@ -91,8 +137,6 @@
 
  ("/home/hixac/Downloads/imgui-1.89.9/examples/example_glfw_opengl3/" (25914 18990 311012 443000) "Makefile" "#main.cpp#" "imgui_tables.o" "main.cpp" "example_glfw_opengl3.vcxproj" "imgui_impl_opengl3.o" "example_glfw_opengl3.vcxproj.filters" "imgui_draw.o" "imgui.ini" "imgui_log.txt" "Makefile.emscripten" "../" "./" "imgui_widgets.o" "imgui.o" "example_glfw_opengl3" "imgui_impl_glfw.o" "main.o" "imgui_demo.o" "build_win32.bat")
 
- ("/home/hixac/Downloads/" (25922 10273 960922 788000) "Telegram Desktop/" "main (2).py~" "../" "./" "pobeda.py" "imgui-1.89.9/" "document.py")
-
  ("/home/hixac/Projects/Fembot/" (25921 11739 891758 266000) "venv/" "../" "./" "main.py")
 
  ("/home/hixac/Desktop/Полезная информация для меня/" (25911 57895 850746 983000) "Screenshot_2023-10-08_17-43-16.png" "todo.txt" "../" "./")
@@ -109,13 +153,9 @@
 
  ("/home/hixac/Projects/labs/labs-Pahirka/" (25912 30257 312791 348000) "lab3-Pahirka/" "lab1-Pahirka/" "lab4-Pahirka/" "../" "./" "lab6-Pahirka/" "lab2-Pahirka/" "lab5-Pahirka/")
 
- ("/home/hixac/Desktop/" (25911 57224 592544 395000) "Полезная информация для меня/" "Программные лекции./" "../" "./")
-
  ("/home/hixac/Projects/labs/labs-Semenov/lab2-Semenov/Structure/" (25907 58394 279831 894000) "main.cpp~" "main.cpp" "build/" "../" "./" "CMakeLists.txt" ".vscode/")
 
  ("/home/hixac/Projects/labs/exercise/build/" (25894 46192 257222 34000) "CMakeFiles/" "Makefile" "CMakeCache.txt" "../" "./" "Runner" "cmake_install.cmake")
-
- ("/home/hixac/Desktop/Программные лекции./" (25907 17416 684159 962000) "pahirka-arrays.txt" "proskurin-3.txt" "#Лаба №2.txt#" "../" "./" "Лаба №2.txt" "semenov-2.txt" "#proskurin-3.txt#")
 
  ("/home/hixac/Projects/labs/labs-Buryachenko/lab-git/" (25907 33574 571937 333000) "main.c" "../" "./" "CMakeLists.txt" ".git/")
 
@@ -128,8 +168,6 @@
  ("/home/hixac/Projects/labs/labs-Semenov/lab2-Semenov/Functional/" (25896 11009 980532 386000) "main.cpp" "build/" "../" "./" "CMakeLists.txt" ".vscode/")
 
  ("/home/hixac/Projects/labs/labs-Semenov/lab2-Semenov/" (25896 744 346891 952000) "OOP/" "../" "Functional/" "./" "Structure/")
-
- ("/home/hixac/Projects/labs/labs-Semenov/" (25900 5707 16665 984000) "lab2-Semenov/" "../" "./" "lab1-Semenov (ocaml)/" "lab1-Semenov/")
 
  ("/etc/systemd/" (25897 52639 540136 176000) "pstore.conf" "system.conf" "journal-upload.conf" "user.conf" "journal-remote.conf" "coredump.conf" "journald.conf" "timesyncd.conf" "oomd.conf" "logind.conf" "homed.conf" "networkd.conf" "system/" "../" "./" "network/" "resolved.conf" "sleep.conf" "user/")
 
