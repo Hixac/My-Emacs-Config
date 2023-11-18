@@ -2,12 +2,12 @@
 ;; ----- smex-history -----
 (
  eglot
- cmake-command-run
+ eglot-code-action-quickfix
+ eldoc-doc-buffer
  shell-command
- mkdir
- scroll-bar-mode
  compile
- shell
+ cmake-command-run
+ mkdir
 )
 
 ;; ----- smex-data -----
@@ -17,7 +17,7 @@
  (magit . 2)
  (package-list-packages . 1)
  (ielm . 1)
- (eglot . 89)
+ (eglot . 98)
  (eglot-server-menu . 1)
  (eglot-manual . 2)
  (company-mode . 2)
@@ -37,25 +37,25 @@
  (elint-file . 6)
  (cd . 3)
  (edebug-defun . 7)
- (cmake-command-run . 4)
+ (cmake-command-run . 8)
  (bash-ts-mode . 1)
  (python-mode . 2)
  (c-mode . 1)
  (debug . 2)
- (compile . 33)
+ (compile . 34)
  (dired . 1)
  (dired-do-shell-command . 4)
  (delete-file . 4)
- (shell-command . 79)
+ (shell-command . 81)
  (setenv . 1)
  (c-add-style . 1)
- (eglot-code-action-quickfix . 7)
+ (eglot-code-action-quickfix . 10)
  (shell . 16)
  (gdb . 2)
  (gud-gdb . 1)
  (uncomment-region . 1)
  (eglot-code-actions . 1)
- (eldoc-doc-buffer . 5)
+ (eldoc-doc-buffer . 6)
  (eglot-show-workspace-configuration . 1)
  (c-set-style . 3)
  (indent-rigidly-left . 1)
@@ -73,5 +73,5 @@
  (tool-bar-mode . 1)
  (scroll-bar-mode . 1)
  (mkdir . 1)
- (eglot-rename . 4)
+ (eglot-rename . 5)
 )
