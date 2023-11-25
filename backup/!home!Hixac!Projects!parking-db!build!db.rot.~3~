@@ -1,0 +1,10 @@
+[AudioRW]
+name = Asshole
+channel = Audiorw
+[Dimitry]
+name = Kovalev
+is_his_real_name = Yes
+[CoolBoy]
+full_name = Nikolay Shmikov
+age = 18
+[END]

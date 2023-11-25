@@ -2,22 +2,22 @@
 ;; ----- smex-history -----
 (
  eglot
- eglot-code-action-quickfix
- eldoc-doc-buffer
+ eglot-upgrade-eglot
+ eglot-update
  shell-command
- compile
- cmake-command-run
- mkdir
+ recover-this-file
+ theme-choose-variant
+ lua-mode
 )
 
 ;; ----- smex-data -----
 (
- (list-packages . 12)
+ (list-packages . 13)
  (customize-themes . 1)
  (magit . 2)
  (package-list-packages . 1)
  (ielm . 1)
- (eglot . 98)
+ (eglot . 121)
  (eglot-server-menu . 1)
  (eglot-manual . 2)
  (company-mode . 2)
@@ -46,10 +46,10 @@
  (dired . 1)
  (dired-do-shell-command . 4)
  (delete-file . 4)
- (shell-command . 81)
+ (shell-command . 90)
  (setenv . 1)
  (c-add-style . 1)
- (eglot-code-action-quickfix . 10)
+ (eglot-code-action-quickfix . 13)
  (shell . 16)
  (gdb . 2)
  (gud-gdb . 1)
@@ -64,7 +64,7 @@
  (delete-rectangle . 1)
  (kill-rectangle . 4)
  (dired-sort-toggle-or-edit . 7)
- (recover-this-file . 1)
+ (recover-this-file . 3)
  (count-words . 1)
  (rust-ts-mode . 2)
  (rust-run . 3)
@@ -74,4 +74,8 @@
  (scroll-bar-mode . 1)
  (mkdir . 1)
  (eglot-rename . 5)
+ (lua-mode . 2)
+ (theme-choose-variant . 1)
+ (eglot-update . 1)
+ (eglot-upgrade-eglot . 2)
 )

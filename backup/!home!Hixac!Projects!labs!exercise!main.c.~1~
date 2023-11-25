@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(void)
+{
+  srand(time(NULL));
+  int room[2][10];
+
+  for (size_t i = 0, rnd = rand() % 100; i < 10; i++, rnd += rand() % 10)
+	room[0][i] = rnd;
+  
+  for (size_t j = 0; j < 10; j++)
+	room[1][j] = rand() % 100;
+  
+  int i, j, flag = 0, num;
+
+  puts("Вместимость всех комнат гостиницы");
+
+  for (j = 0; j < 10; j++)
+	printf("Комната #%i рассчитана на %i мест\n", room[0][j], room[1][j]);
+
+  puts("Введите минимальное необходимое количество мест");
+  scanf("%i", &num);
+
+  for (j = 0; j < 10; j++)
+	if (room[1][j] >= num)
+	  {
+		flag = 1;
+		printf("Комната #%i рассчитана на %i мест\n", room[0][j], room[1][j]);
+	  }
+
+  if (flag == 0)
+	puts("Комнат с таким количеством мест нет");
+}

@@ -1,0 +1,14 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias lua-lsp='~/Source/lua-language-server/bin/lua-language-server'
+
+PS1='[\u@\h \W]\$ '
+source ~/Source/gitstatus/gitstatus.prompt.sh
+alias config='/usr/bin/git --git-dir=/home/Hixac/.cfg/ --work-tree=/home/Hixac'

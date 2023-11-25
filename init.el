@@ -19,6 +19,7 @@
 ;; End of custom functions! ----------------------------------------------------------------
 
 (tool-bar-mode -1)
+(menu-bar-mode -1)
 (scroll-bar-mode -1)
 (setq create-lockfiles nil)
 (ido-mode 1)
@@ -31,7 +32,7 @@
  '(custom-safe-themes
    '("ba4ab079778624e2eadbdc5d9345e6ada531dc3febeb24d257e6d31d5ed02577" default))
  '(package-selected-packages
-   '(rust-mode multiple-cursors cmake-font-lock company magit gruber-darker-theme smex))
+   '(eglot flymake-lua company-lua rust-mode multiple-cursors cmake-font-lock company magit gruber-darker-theme smex))
  '(warning-suppress-log-types '((initialization))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -89,3 +90,7 @@
 		  (lambda () (prettify-symbols-mode)))
 
 (add-hook 'rust-mode-hook 'eglot-ensure)
+
+(with-eval-after-load 'eglot
+  (add-to-list 'eglot-server-programs
+			   '(lua-mode . ("lua-language-server"))))
