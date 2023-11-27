@@ -75,12 +75,8 @@
 
 (add-hook 'after-init-hook 'global-company-mode)
 
-(setq c-default-style '(("c++" . "linux")
-                        (java-mode . "java")
-                        (awk-mode . "awk")
-                        (other . "gnu"))
+(setq c-default-style "linux"
 	  c-basic-offset 4)
-
 (electric-pair-mode 1)
 
 (require 'multiple-cursors)

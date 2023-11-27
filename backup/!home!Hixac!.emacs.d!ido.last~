@@ -2,6 +2,8 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/Hixac/.emacs.d/" . "auto-save-list/")
+ ("/home/Hixac/Projects/parking-db/src/" . "imgui/")
  ("/home/Hixac/.config/awesome/themes/" . "zenburn/")
  ("/home/Hixac/.config/awesome/" . "themes/")
  ("/home/Hixac/Source/" . "gitstatus/")
@@ -11,7 +13,7 @@
  ("/home/Hixac/Projects/labs/" . "labs-Pahirka/")
  ("/home/Hixac/Projects/" . "parking-db/")
  ("/home/Hixac/.config/" . "awesome/")
- ("/home/Hixac/" . ".config/")
+ ("/home/Hixac/" . ".emacs.d/")
  ("/etc/X11/" . "xorg.conf.d/")
  ("/home/hixac/Projects/RustRust/" . "src/")
  ("/home/hixac/Projects/Parking/ext/" . "raylib/")
@@ -38,11 +40,13 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/Hixac/.emacs.d/"
+ "/home/Hixac/Projects/parking-db/src/imgui/"
+ "/home/Hixac/Projects/parking-db/src/"
+ "/home/Hixac/Temp/"
  "/home/Hixac/.config/awesome/themes/zenburn/"
  "/home/Hixac/.config/awesome/"
- "/home/Hixac/Projects/parking-db/src/"
  "/home/Hixac/"
- "/home/Hixac/.emacs.d/"
  "/home/Hixac/Projects/parking-db/build/"
  "/home/Hixac/Projects/parking-db/ext/imgui/"
  "/home/Hixac/Source/gitstatus/"
@@ -86,41 +90,49 @@
  "/home/hixac/Projects/labs/labs-Buryachenko/lab-git/"
  "/root/"
  "/home/hixac/Desktop/Программные лекции./"
- "/home/hixac/Projects/labs/labs-Semenov/lab2-Semenov/OOP/"
- "/etc/systemd/"
 )
 
 ;; ----- ido-work-file-list -----
 (
+ "init.el"
+ "fastcombo.h"
+ "lexer.h"
+ "Speech.txt"
+ "Speach.txt"
  "theme.lua"
  "rc.lua"
  "extracter.h"
  "parser.cpp"
  ".bash_profile"
- ".profile"
- "init.el"
- "parser.h"
- "db.rot"
- "imgui_demo.cpp"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/home/Hixac/Projects/parking-db/src/imgui/" (25956 51319 252159 328000) "../" "#fastcombo.h#" "./" "fastcombo.h" "fastcombo.h~")
+
+ ("/home/Hixac/.emacs.d/auto-save-list/" (25956 51254 959860 666000) "../" ".saves-8783-Hixac~" ".saves-2124-Hixac~" ".saves-1406-Hixac~" "./" ".saves-1932-Hixac~" ".saves-11770-Hixac~" ".saves-4405-Hixac~" ".saves-2506-Hixac~" ".saves-9076-Hixac~" ".saves-8600-Hixac~" ".saves-13197-Hixac~" ".saves-6354-Hixac~")
+
+ ("/home/Hixac/.emacs.d/" (25956 22848 553281 256000) "../" "tree-sitter/" "elpa/" "init.el" "auto-save-list/" "./" ".git/" "smex-items" "ido.last" ".mc-lists.el" "transient/" "backup/")
+
+ ("/home/Hixac/" (25956 50512 235646 497000) "../" ".bash_history" ".emacs.d/" "Desktop/" "Pictures/" ".gitconfig" ".xsession-errors.old" ".config/" ".bashrc" ".viminfo" ".gtkrc-2.0" "./" ".local/" ".xinitrc" ".lesshst" ".gnupg/" "Projects/" ".cache/" ".Xauthority" ".bash_logout" ".imwheelrc" "Downloads/" "Videos/" ".dmrc" ".xsession-errors" ".ICEauthority" "Temp/" ".profile" ".mozilla/" "Source/" ".bash_profile")
+
+ ("/home/Hixac/Temp/" (25956 40481 263168 914000) "../" "./" "Speech.txt")
+
+ ("/home/Hixac/.config/awesome/" (25955 32789 94569 864000) "../" "rc.lua" "cyclefocus/" "./" ".git/" "awesome-wm-widgets/" "themes/" "json.lua")
+
+ ("/home/Hixac/Projects/parking-db/src/" (25955 38762 763951 633000) "../" "dataunit.h" "window/" "Base.h" "main.cpp" "extracter.cpp" "./" "parser.cpp" "dataunit.cpp" "imgui/" "lexer.h" "LoggingSystem.h" "parser.h" "extracter.h")
+
+ ("/home/Hixac/Projects/parking-db/" (25955 40386 507009 282000) "../" ".gitignore" "README.md" "build/" "./" ".git/" ".cache/" "src/" "ext/" "CMakeLists.txt" "db.rot")
+
+ ("/home/Hixac/Projects/" (25955 34394 715233 830000) "../" "./" "labs/" "parking-db/")
+
  ("/home/Hixac/.config/awesome/themes/zenburn/" (25947 13319 962459 995000) "../" "theme.lua" "layouts/" "zenburn-background.png" "titlebar/" "./" "taglist/" "awesome-icon.png")
 
  ("/home/Hixac/.config/awesome/themes/default/" (25947 13319 952459 995000) "../" "theme.lua" "layouts/" "titlebar/" "./" "taglist/" "background.png" "submenu.png" "background_white.png" "README")
 
  ("/home/Hixac/.config/awesome/themes/" (25947 42538 239067 997000) "../" "gtk/" "./" "xresources/" "default/" "sky/" "zenburn/")
 
- ("/home/Hixac/.config/awesome/" (25954 11084 597576 497000) "../" "rc.lua" "cyclefocus/" "./" ".git/" "awesome-wm-widgets/" "themes/" "json.lua" "vicious/")
-
- ("/home/Hixac/" (25954 5187 794926 205000) "../" ".bash_history" ".emacs.d/" "Desktop/" ".cfg/" "Pictures/" ".gitconfig" ".xsession-errors.old" ".config/" ".bashrc" ".viminfo" ".gtkrc-2.0" "./" ".local/" ".xinitrc" ".lesshst" ".gnupg/" "Projects/" ".cache/" ".Xauthority" ".bash_logout" ".imwheelrc" "Downloads/" "Videos/" ".dmrc" ".xsession-errors" ".ICEauthority" ".profile" ".mozilla/" "Source/" ".bash_profile")
-
- ("/home/Hixac/Projects/parking-db/src/" (25953 2874 609151 38000) "../" "dataunit.h" "window/" "Base.h" "main.cpp" "extracter.cpp" "./" "parser.cpp" "dataunit.cpp" "lexer.h" "LoggingSystem.h" "parser.h" "extracter.h")
-
  ("/home/Hixac/.cache/" (25953 52915 200468 694000) "../" "wallpaper/" "gnome-software/" "tracker3/" "thumbnails/" "deepin/" "lightdm/" "clangd/" "flameshot/" "folks/" "gnome-calculator/" "sessions/" "xfce4/" "kitty/" "./" "yay/" "obexd/" "evolution/" "fontconfig/" "dde-session-fifo" "event-sound-cache.tdb.744cdfe312b34c82b60c3d7f3b56c408.x86_64-pc-linux-gnu" "gitstatus/" "vim/" "ibus/" "mozilla/" "mesa_shader_cache/" "gnome-desktop-thumbnailer/" "go-build/" "gstreamer-1.0/" "awmw/" "awesome/" "epiphany/" "flatpak/")
-
- ("/home/Hixac/.emacs.d/" (25953 58656 297285 856000) "../" "tree-sitter/" "elpa/" "games/" "init.el" "auto-save-list/" "./" "session.2158534fc-3ba0-4c61-bdef-06c0605143b1" ".git/" "smex-items" "session.21c7585a8-a6aa-4924-a809-bb53234c49bb" "session.24f944db2-4d0b-419e-ae5c-cfb93837f38b" "ido.last~" "session.2d415b0bc-ba69-491d-b67c-4c42df0eac98" "ido.last" "init.el~" ".mc-lists.el" "transient/" "backup/")
 
  ("/home/Hixac/.config/" (25953 52915 273804 36000) "../" "gtk-3.0/" "Vault/" "user-dirs.locale" "dde-appearance/" "deepin/" "gtk-4.0/" "xfce4/" "kitty/" "./" "yay/" "gnome-session/" "evolution/" "deepin-kwinrc" "pulse/" "dconf/" "systemd/" ".gsd-keyboard.settings-ported" "autostart/" "ibus/" "deepin-kwinrulesrc" "xfe/" "gh/" "nautilus/" "QtProject.conf" "Thunar/" "kglobalshortcutsrc" "awesome/" "epiphany/" "user-dirs.dirs" "tixati/" "goa-1.0/")
 
@@ -149,10 +161,6 @@
  ("/home/Hixac/Projects/parking-db/ext/imgui/" (25948 56316 370644 170000) "../" "imgui_impl_glfw.h" "imgui_draw.cpp" "imgui_demo.cpp" "imstb_truetype.h" "imconfig.h" "imgui_tables.cpp" "./" "imgui_impl_glfw.cpp" "imgui.cpp" "LICENSE.txt" "imgui_internal.h" "imstb_rectpack.h" "imgui_impl_opengl3.cpp" "imgui_impl_opengl3_loader.h" "imstb_textedit.h" "misc/" "imgui.h" "imgui_impl_opengl3.h" "imgui_widgets.cpp")
 
  ("/home/Hixac/Projects/parking-db/ext/" (25948 56316 377311 22000) "../" "spdlog/" "./" "imgui/")
-
- ("/home/Hixac/Projects/parking-db/" (25948 56633 276162 347000) "../" ".gitignore" "README.md" "build/" "./" ".git/" ".cache/" "src/" "ext/" "CMakeLists.txt")
-
- ("/home/Hixac/Projects/" (25948 56314 777266 528000) "../" "./" "labs/" "parking-db/")
 
  ("/home/Hixac/Projects/labs/labs-Pahirka/lab1-Pahirka/" (25948 50612 488313 520000) "../" "main.c~" "main.c" "build/" "./" "CMakeLists.txt")
 

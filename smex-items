@@ -1,23 +1,23 @@
 
 ;; ----- smex-history -----
 (
- eglot
- eglot-upgrade-eglot
- eglot-update
- shell-command
  recover-this-file
- theme-choose-variant
- lua-mode
+ uncomment-region
+ comment-region
+ eglot
+ c++-mode
+ delete-file
+ rename-file
 )
 
 ;; ----- smex-data -----
 (
  (list-packages . 13)
- (customize-themes . 1)
+ (customize-themes . 5)
  (magit . 2)
  (package-list-packages . 1)
  (ielm . 1)
- (eglot . 121)
+ (eglot . 123)
  (eglot-server-menu . 1)
  (eglot-manual . 2)
  (company-mode . 2)
@@ -26,8 +26,8 @@
  (man . 1)
  (describe-function . 1)
  (cmake-help . 7)
- (c++-mode . 2)
- (comment-region . 3)
+ (c++-mode . 3)
+ (comment-region . 5)
  (eglot-shutdown . 3)
  (query-replace . 6)
  (lisp-mode . 1)
@@ -45,7 +45,7 @@
  (compile . 34)
  (dired . 1)
  (dired-do-shell-command . 4)
- (delete-file . 4)
+ (delete-file . 6)
  (shell-command . 90)
  (setenv . 1)
  (c-add-style . 1)
@@ -53,18 +53,18 @@
  (shell . 16)
  (gdb . 2)
  (gud-gdb . 1)
- (uncomment-region . 1)
+ (uncomment-region . 4)
  (eglot-code-actions . 1)
  (eldoc-doc-buffer . 6)
  (eglot-show-workspace-configuration . 1)
- (c-set-style . 3)
+ (c-set-style . 4)
  (indent-rigidly-left . 1)
  (eglot-reconnect . 4)
  (just-one-space . 1)
  (delete-rectangle . 1)
  (kill-rectangle . 4)
  (dired-sort-toggle-or-edit . 7)
- (recover-this-file . 3)
+ (recover-this-file . 5)
  (count-words . 1)
  (rust-ts-mode . 2)
  (rust-run . 3)
@@ -75,7 +75,10 @@
  (mkdir . 1)
  (eglot-rename . 5)
  (lua-mode . 2)
- (theme-choose-variant . 1)
+ (theme-choose-variant . 2)
  (eglot-update . 1)
  (eglot-upgrade-eglot . 2)
+ (enable-theme . 1)
+ (disable-theme . 1)
+ (rename-file . 1)
 )
