@@ -1,0 +1,28 @@
+#pragma once
+
+#include <string>
+#include <vector>
+
+#include <imgui.h>
+
+namespace MyGui {
+	
+	class FastCombo
+	{
+	public:
+		FastCombo(const std::string& label, std::vector<std::string>& values, size_t& preview_index)
+		{
+			preview_index++;
+			if (ImGui::BeginCombo(label.c_str(), values[preview_index].c_str()))
+			{
+					
+			}
+				
+		}
+		~FastCombo()
+		{
+			ImGui::EndCombo();
+		}
+	};
+	
+}

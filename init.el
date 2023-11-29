@@ -32,7 +32,7 @@
  '(custom-safe-themes
    '("ba4ab079778624e2eadbdc5d9345e6ada531dc3febeb24d257e6d31d5ed02577" default))
  '(package-selected-packages
-   '(eglot flymake-lua company-lua rust-mode multiple-cursors cmake-font-lock company magit gruber-darker-theme smex))
+   '(move-text eglot flymake-lua company-lua rust-mode multiple-cursors cmake-font-lock company magit gruber-darker-theme smex))
  '(warning-suppress-log-types '((initialization))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -75,11 +75,30 @@
 
 (add-hook 'after-init-hook 'global-company-mode)
 
-(setq c-default-style '(("c++" . "linux")
-                        (java-mode . "java")
-                        (awk-mode . "awk")
-                        (other . "gnu"))
-	  c-basic-offset 4)
+;; (setq c-default-style '(("c++" . "linux")
+;;                         (java-mode . "java")
+;;                         (awk-mode . "awk")
+;;                         (other . "gnu")))
+
+;; (setq c-default-style "linux"
+;;       c-basic-offset 4
+;; 	  indent-tabs-mode -1)
+
+(setq-default c-indent-tabs-mode t     ; Pressing TAB should cause indentation
+              c-indent-level 4         ; A TAB is equivilent to four spaces
+              c-argdecl-indent 0       ; Do not indent argument decl's extra
+              c-tab-always-indent t
+              backward-delete-function nil) ; DO NOT expand tabs when deleting
+(c-add-style "my-c-style" '((c-continued-statement-offset 4))) ; If a statement continues on the next line, indent the continuation by 4
+(defun my-c-mode-hook ()
+  (c-set-style "my-c-style")
+  (c-set-offset 'substatement-open '0) ; brackets should be at same indentation level as the statements they open
+  (c-set-offset 'inline-open '0)
+  (c-set-offset 'block-open '0)
+  (c-set-offset 'brace-list-open '0)   ; all "opens" should be indented by the c-indent-level
+  (c-set-offset 'case-label '0))       ; indent case labels by c-indent-level, too
+(add-hook 'c-mode-hook 'my-c-mode-hook)
+(add-hook 'c++-mode-hook 'my-c-mode-hook)
 
 (electric-pair-mode 1)
 
@@ -98,3 +117,5 @@
 (with-eval-after-load 'eglot
   (add-to-list 'eglot-server-programs
 			   '(lua-mode . ("lua-language-server"))))
+
+(move-text-default-bindings)

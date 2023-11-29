@@ -1,23 +1,23 @@
 
 ;; ----- smex-history -----
 (
- recover-this-file
- uncomment-region
- comment-region
+ move-text-up
+ list-packages
+ replace-string
  eglot
+ comment-region
  c++-mode
- delete-file
- rename-file
+ c-set-style
 )
 
 ;; ----- smex-data -----
 (
- (list-packages . 13)
+ (list-packages . 14)
  (customize-themes . 5)
  (magit . 2)
  (package-list-packages . 1)
  (ielm . 1)
- (eglot . 123)
+ (eglot . 127)
  (eglot-server-menu . 1)
  (eglot-manual . 2)
  (company-mode . 2)
@@ -26,8 +26,8 @@
  (man . 1)
  (describe-function . 1)
  (cmake-help . 7)
- (c++-mode . 3)
- (comment-region . 5)
+ (c++-mode . 7)
+ (comment-region . 9)
  (eglot-shutdown . 3)
  (query-replace . 6)
  (lisp-mode . 1)
@@ -57,7 +57,7 @@
  (eglot-code-actions . 1)
  (eldoc-doc-buffer . 6)
  (eglot-show-workspace-configuration . 1)
- (c-set-style . 4)
+ (c-set-style . 6)
  (indent-rigidly-left . 1)
  (eglot-reconnect . 4)
  (just-one-space . 1)
@@ -73,7 +73,7 @@
  (tool-bar-mode . 1)
  (scroll-bar-mode . 1)
  (mkdir . 1)
- (eglot-rename . 5)
+ (eglot-rename . 7)
  (lua-mode . 2)
  (theme-choose-variant . 2)
  (eglot-update . 1)
@@ -81,4 +81,8 @@
  (enable-theme . 1)
  (disable-theme . 1)
  (rename-file . 1)
+ (c-indent-defun . 1)
+ (indent-region . 1)
+ (replace-string . 1)
+ (move-text-up . 1)
 )
