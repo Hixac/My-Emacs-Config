@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: spc
+# key: spc
+# --
+namespace $1 {
+
+		  $0
+		  
+}

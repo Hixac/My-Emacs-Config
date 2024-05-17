@@ -16,13 +16,66 @@
     ;; otherwise, just do the normal kill word.
     (backward-kill-word 1)))
 
+(defun move-text-internal (arg)
+   (cond
+    ((and mark-active transient-mark-mode)
+     (if (> (point) (mark))
+            (exchange-point-and-mark))
+     (let ((column (current-column))
+              (text (delete-and-extract-region (point) (mark))))
+       (forward-line arg)
+       (move-to-column column t)
+       (set-mark (point))
+       (insert text)
+       (exchange-point-and-mark)
+       (setq deactivate-mark nil)))
+    (t
+     (beginning-of-line)
+     (when (or (> arg 0) (not (bobp)))
+       (forward-line)
+       (when (or (< arg 0) (not (eobp)))
+            (transpose-lines arg))
+       (forward-line -1)))))
+
+(defun move-text-down (arg)
+   "Move region (transient-mark-mode active) or current line
+  arg lines down."
+   (interactive "*p")
+   (move-text-internal arg))
+
+(defun move-text-up (arg)
+   "Move region (transient-mark-mode active) or current line
+  arg lines up."
+   (interactive "*p")
+   (move-text-internal (- arg)))
+
+(defun toggle-window-split ()
+  (interactive)
+  (if (= (count-windows) 2)
+      (let* ((this-win-buffer (window-buffer))
+         (next-win-buffer (window-buffer (next-window)))
+         (this-win-edges (window-edges (selected-window)))
+         (next-win-edges (window-edges (next-window)))
+         (this-win-2nd (not (and (<= (car this-win-edges)
+                     (car next-win-edges))
+                     (<= (cadr this-win-edges)
+                     (cadr next-win-edges)))))
+         (splitter
+          (if (= (car this-win-edges)
+             (car (window-edges (next-window))))
+          'split-window-horizontally
+        'split-window-vertically)))
+    (delete-other-windows)
+    (let ((first-win (selected-window)))
+      (funcall splitter)
+      (if this-win-2nd (other-window 1))
+      (set-window-buffer (selected-window) this-win-buffer)
+      (set-window-buffer (next-window) next-win-buffer)
+      (select-window first-win)
+      (if this-win-2nd (other-window 1))))))
+
 ;; End of custom functions! ----------------------------------------------------------------
 
-(tool-bar-mode -1)
-(menu-bar-mode -1)
-(scroll-bar-mode -1)
-(setq create-lockfiles nil)
-(ido-mode 1)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -32,7 +85,7 @@
  '(custom-safe-themes
    '("ba4ab079778624e2eadbdc5d9345e6ada531dc3febeb24d257e6d31d5ed02577" default))
  '(package-selected-packages
-   '(move-text eglot flymake-lua company-lua rust-mode multiple-cursors cmake-font-lock company magit gruber-darker-theme smex))
+   '(python haskell-mode move-text eglot flymake-lua company-lua rust-mode multiple-cursors cmake-font-lock company magit gruber-darker-theme smex))
  '(warning-suppress-log-types '((initialization))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -41,81 +94,37 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "JetBrainsMonoNL Nerd Font" :foundry "JB" :slant normal :weight regular :height 128 :width normal)))))
 
-(setq backup-directory-alist '(("." . "~/.emacs.d/backup"))
-  backup-by-copying t    ; Don't delink hardlinks
-  version-control t      ; Use version numbers on backups
-  delete-old-versions t  ; Automatically delete excess backups
-  kept-new-versions 20   ; how many of the newest versions to keep
-  kept-old-versions 5    ; and how many of the old
-)
-(setq tab-always-indent 'complete)
+(add-to-list 'load-path "~/.emacs.d/HIXAC/")
+(add-to-list 'load-path "~/.emacs.d/")
+(load-file "~/.emacs.d/HIXAC/remaps.el")
+(load-file "~/.emacs.d/HIXAC/modes.el")
+(load-file "~/.emacs.d/HIXAC/hooks.el")
+(load-file "~/.emacs.d/HIXAC/sets.el")
+
+(load-file "~/.emacs.d/HIXAC/packages/harpoon.el")
+(load-file "~/.emacs.d/HIXAC/packages/nyan.el")
+
+(with-eval-after-load 'eglot
+  (add-to-list 'eglot-server-programs
+               '((c-mode c++-mode)
+                 . ("clangd"
+                    "-j=4"
+                    "--log=error"
+                    "--malloc-trim"
+					"--clang-tidy"
+					"--completion-style=detailed"
+                    "--background-index"
+                    "--pch-storage=memory"
+                    "--header-insertion=never"
+                    "--header-insertion-decorators=0"))))
+
+(gcmh-mode 1)
+
 (add-to-list 'completion-styles 'initials t)
-
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-;; This is your old M-x.
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-
-(global-set-key (kbd "C-<backspace>") 'hixac/backward-kill-word)
-
-(setq inhibit-startup-screen t)
-(setq-default tab-width 4)
-
-(global-display-line-numbers-mode)
-
-(setq dired-listing-switches "-vaBhl  --group-directories-first")
-
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
-
-(defun mode-line-buffer-file-parent-directory ()
-  (when buffer-file-name
-    (concat "[" (directory-file-name (file-name-directory buffer-file-name)) "]")))
-(setq-default mode-line-buffer-identification
-			  (cons (car mode-line-buffer-identification) '((:eval (mode-line-buffer-file-parent-directory)))))
-
-(add-hook 'after-init-hook 'global-company-mode)
-
-;; (setq c-default-style '(("c++" . "linux")
-;;                         (java-mode . "java")
-;;                         (awk-mode . "awk")
-;;                         (other . "gnu")))
-
-;; (setq c-default-style "linux"
-;;       c-basic-offset 4
-;; 	  indent-tabs-mode -1)
-
-(setq-default c-indent-tabs-mode t     ; Pressing TAB should cause indentation
-              c-indent-level 4         ; A TAB is equivilent to four spaces
-              c-argdecl-indent 0       ; Do not indent argument decl's extra
-              c-tab-always-indent t
-              backward-delete-function nil) ; DO NOT expand tabs when deleting
-(c-add-style "my-c-style" '((c-continued-statement-offset 4))) ; If a statement continues on the next line, indent the continuation by 4
-(defun my-c-mode-hook ()
-  (c-set-style "my-c-style")
-  (c-set-offset 'substatement-open '0) ; brackets should be at same indentation level as the statements they open
-  (c-set-offset 'inline-open '0)
-  (c-set-offset 'block-open '0)
-  (c-set-offset 'brace-list-open '0)   ; all "opens" should be indented by the c-indent-level
-  (c-set-offset 'case-label '0))       ; indent case labels by c-indent-level, too
-(add-hook 'c-mode-hook 'my-c-mode-hook)
-(add-hook 'c++-mode-hook 'my-c-mode-hook)
-
-(electric-pair-mode 1)
-
-(require 'multiple-cursors)
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 (add-hook 'rust-mode-hook
 		  (lambda () (setq indent-tabs-mode nil))
 		  (lambda () (prettify-symbols-mode)))
 
 (add-hook 'rust-mode-hook 'eglot-ensure)
-
-(with-eval-after-load 'eglot
-  (add-to-list 'eglot-server-programs
-			   '(lua-mode . ("lua-language-server"))))
-
-(move-text-default-bindings)
