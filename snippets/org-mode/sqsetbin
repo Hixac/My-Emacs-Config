@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: sqsetbin
+# key: sqsetbin
+# --
+$$1 \sqsubset $2$$3
