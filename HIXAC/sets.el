@@ -10,10 +10,12 @@
   kept-new-versions 20   ; how many of the newest versions to keep
   kept-old-versions 5    ; and how many of the old
 )
+
 (setq tab-always-indent 'complete)
 
 (setq inhibit-startup-screen t)
 (setq-default tab-width 4)
+(setq-default indent-tabs-mode nil)
 
 (global-display-line-numbers-mode)
 
@@ -46,3 +48,5 @@
 
 (setq org-hide-emphasis-markers t)
 (global-auto-revert-mode 1)
+
+(setq-default mode-line-format nil)

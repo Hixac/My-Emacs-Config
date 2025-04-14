@@ -17,5 +17,10 @@
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
-(global-set-key (kbd "C-c <") 'flymake-goto-next-error)
-(global-set-key (kbd "C-c >") 'flymake-goto-prev-error)
+(global-set-key (kbd "C-c >") 'flymake-goto-next-error)
+(global-set-key (kbd "C-c <") 'flymake-goto-prev-error)
+
+(global-set-key (kbd "C-<tab>") 'recompile)
+
+(global-set-key (kbd "C-c z") 'ace-window)
+(setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
