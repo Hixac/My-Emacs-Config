@@ -44,18 +44,5 @@
 
 (setq zig-format-on-save nil)
 
-(with-eval-after-load 'eglot
-  (add-to-list 'eglot-server-programs
-               '(java-mode . ("java" 
-                              "-Declipse.application=org.eclipse.jdt.ls.core.id1"
-                              "-Dosgi.bundles.defaultStartLevel=4"
-                              "-Declipse.product=org.eclipse.jdt.ls.core.product"
-                              "-Dlog.level=ALL"
-                              "-noverify"
-                              "-Xmx1G"
-                              "-jar" "./jdtls/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.2.1400.v20250331-1702.jar"  ; Путь к JAR
-                              "-configuration" "~/.emacs.d/jdtls/config_linux"  ; Для Linux
-                              "--add-modules=ALL-SYSTEM"
-                              "--add-opens java.base/java.util=ALL-UNNAMED"
-                              "--add-opens java.base/java.lang=ALL-UNNAMED"))))
-
+(require 'lsp-java)
+(add-hook 'java-mode-hook #'lsp)
