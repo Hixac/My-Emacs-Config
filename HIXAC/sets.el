@@ -17,7 +17,7 @@
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
 
-(global-display-line-numbers-mode)
+; (global-display-line-numbers-mode)
 
 (setq dired-listing-switches "-vaBhl  --group-directories-first")
 

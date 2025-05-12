@@ -5,6 +5,8 @@
 (setq custom-file "~/.emacs.d/HIXAC/custom.el")
 (load custom-file t)
 
+(add-to-list 'default-frame-alist '(font . "Mplus1Code 15"))
+
 (add-to-list 'load-path "~/.emacs.d/")
 (load-file "~/.emacs.d/funcs.el")
 
@@ -13,10 +15,7 @@
 (load-file "~/.emacs.d/HIXAC/modes.el")
 (load-file "~/.emacs.d/HIXAC/hooks.el")
 (load-file "~/.emacs.d/HIXAC/sets.el")
-(load-file "~/.emacs.d/HIXAC/compile-directory/defun.el")
-(load-file "~/.emacs.d/HIXAC/tags-generator/tags.el")
-
-(add-to-list 'default-frame-alist '(font . "Mplus1Code 20"))
+(load-file "~/.emacs.d/HIXAC/my-org.el")
 
 (with-eval-after-load 'eglot
   (add-to-list 'eglot-server-programs

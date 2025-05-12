@@ -14,10 +14,10 @@
      default))
  '(package-selected-packages
    '(ace-window ample-theme cmake-font-lock company company-lua eglot
-                flymake-lua glsl-mode gruber-darker-theme haskell-mode
-                latex-math-preview lsp-java lua-mode magit move-text
-                multiple-cursors php-mode python rust-mode
-                smalltalk-mode smex zig-mode))
+		flymake-lua glsl-mode gruber-darker-theme haskell-mode
+		latex-math-preview lsp-java lua-mode magit move-text
+		multiple-cursors php-mode python rust-mode
+		smalltalk-mode smex yasnippet zig-mode))
  '(warning-suppress-log-types '((initialization))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
